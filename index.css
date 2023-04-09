@@ -1,0 +1,1755 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.body{
+    background:  linear-gradient(rgb(228, 227, 227 ),#fddfc5, #eedfd3e1);
+    padding-bottom: 60px;
+}
+.menu{
+
+    width: 100%;
+    height: 60px;
+    background-color: rgba(35, 35, 35, 0.932);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    z-index: 4;
+    position: relative;
+}
+.menu__burger-button{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}.linea{
+    background-color: white;
+    height:6px ;
+    width: 100%;
+    transition: 0.3s;
+    position: relative;
+    
+
+    
+}
+.menu__items{
+    position: absolute;
+    top: 60px;
+    background-color: #c24814db;
+    width: 100%;
+    opacity: 0;
+    left: 0;
+    transform: translateY(-200%);
+    transition: 1s;
+    z-index: -11;
+
+}
+.menu input{
+position: absolute;
+width: 30px;
+height: 30px;
+top: 15px;
+right: 15px;
+z-index: 11;
+opacity: 0  ;
+}
+
+.menu input:checked~.menu__items{
+    opacity: 1;
+    transform: translateY(0);
+    z-index: 10;
+
+    
+}
+
+.menu input:checked~.menu__burger-button >.linea{
+    transform: rotate(45deg);
+    
+}
+.menu input:checked~.menu__burger-button >.linea::after{
+    transform: rotate(90deg);
+    bottom: 0;
+    
+}
+.menu input:checked~.menu__burger-button >.linea::before{
+    transform: rotate(90deg);
+    top: 0;
+    
+}
+.linea::before{
+    content: '';
+    background-color: white;
+    height:6px ;
+    width: 100%;
+    position: absolute;
+    top: 12px;
+    transition: 0.3s;
+
+}
+.linea::after{
+    content: '';
+    background-color: white;
+    height:6px ;
+    width: 100%;
+    position: absolute;
+    bottom: 12px;
+    transition: 0.3s;
+
+}
+.menu__link{
+    color: white;
+    font-size: 40px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header{
+    background-image: url(img/living\ room\ \(4\).jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 93vh;
+    background-position: center;
+    opacity: 1;
+
+
+}
+h1{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    
+  
+    color: rgba(255, 162, 0, 0.864);
+}
+.title{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    
+    
+    color: rgba(72, 71, 71, 0.864);
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 93vh;
+}
+.menu__logo{
+    height: 38px;
+}
+
+
+
+
+
+
+
+
+
+/* .portal{
+    background-image: url(img/header-pc.png);
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;    
+
+}
+.image img{
+    object-fit: cover;
+    width: 100%;
+
+} */
+
+.info{
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+.info__title{
+    margin-top: 20px;
+    font-size: 40px;
+    color: black;
+    text-align: center;
+}
+.info__text{
+    margin-top: 20px;
+    font-size: 20px;
+    color: black;
+}
+
+
+
+
+
+
+
+
+.principal{
+    background-image: url(img/hall.jpg);
+    width: 100%;
+    height: 210px;
+    display: flex;
+    justify-content: flex-end;
+    border: 4px solid #fc8621;
+
+    margin-top: 15px;
+}
+.sec1{
+    background-image: url(img/bathroom\ \(1\).jpg);
+    width: 100%;
+    height: 249px;
+    margin-top: 15px;
+    border: 4px solid #682c0e;
+}
+.sec2{
+    background-image: url(img/bedroom\ 1\ \(2\).jpg);
+    width: 100%;
+    height: 229px;
+    margin-top: 15px;
+    border: 4px solid #fc8621;
+}
+.sec3{
+    background-image: url(img/bedroom\ 2.jpg);
+    width: 100%;
+    height: 225px;
+    margin-top: 15px;
+    border: 4px solid #682c0e;
+}
+.sec4{
+    background-image: url(img/bedroom\ 3\ \(1\).jpg);
+    width: 100%;
+    height: 230px;
+    margin-top: 15px;
+    border: 4px solid #682c0e;
+}
+.sec5{
+    background-image: url(img/kitchen\ \(1\).jpg);
+    width: 100%;
+    height: 230px;
+    margin-top: 15px;
+    border: 4px solid #fc8621;
+}
+.sec6{
+    background-image: url(img/living\ room\ \(1\).jpg);
+    width: 100%;
+    height: 230px;
+    margin-top: 15px;
+    border: 4px solid #682c0e;
+}
+.sec7{
+    background-image: url(img/terrace\ \(3\).jpg);
+    width: 100%;
+    height: 230px;
+    margin-top: 15px;
+    border: 4px solid #fc8621;
+}
+.part1{
+    width: 50%;
+    padding-left: 6%;
+    padding-right: 3%;
+    
+}
+.part2{
+    width: 50%;
+    padding-right: 6%;
+    padding-left: 3%;
+
+}
+.map__text1{
+font-size: 20px;
+
+}
+.map__title{
+    font-size: 40px;
+    margin: 20px auto;
+    text-align: center;
+}
+.map__logo1{
+    width: 40px;
+    margin: 0 30px ;
+    
+}
+.map__url1{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.821);
+   
+}
+
+.map__box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.instruction1{
+    background-image: url(img/instruction_img1.jpeg);
+    width: 62%;
+    height: 337px;
+    display: flex;
+    justify-content: flex-end;
+    border: 4px solid #fc8621;
+
+    margin-top: 15px;
+}
+.instruction2{
+    background-image: url(img/instruction_img2.jpeg);
+    width: 62%;
+    height: 270px;
+    margin-top: 15px;
+    border: 4px solid #682c0e;
+}
+.instruction3{
+    background-image: url(img/instruction_img3.jpeg);
+    width: 62%;
+    height: 270px;
+    margin-top: 15px;
+    border: 4px solid #fc8621;
+}
+.instruction4{
+    background-image: url(img/instruction_img4.jpeg);
+    width: 62%;
+    height: 131px;
+    margin-top: 15px;
+    border: 4px solid #682c0e;
+}
+.instruction5{
+    background-image: url(img/instruction_img5.jpeg);
+    width: 62%;
+    height: 349px;
+    margin-top: 15px;
+    border: 4px solid #fc8621;
+}
+.instruction6{
+    background-image: url(img/instruction_img6.jpeg);
+    width: 62%;
+    height: 378px;
+    margin-top: 15px;
+    border: 4px solid #682c0e;
+}
+.instruction7{
+    background-image: url(img/instruction_img7.jpeg);
+    width: 62%;
+    height: 109px;
+    margin-top: 15px;
+    border: 4px solid #fc8621;
+    
+    
+}
+.instruction8{
+    background-image: url(img/instruction_img8.jpeg);
+    width: 62%;
+    height: 271px;
+    margin-top: 15px;
+    border: 4px solid #fc8621;
+}
+.instruction9{
+    background-image: url(img/instruction_img9.jpeg);
+    width: 62%;
+    height: 277px;
+    margin-top: 15px;
+    border: 4px solid #682c0e;
+    
+}
+.instruction10{
+    background-image: url(img/instruction_img10.jpeg);
+    width: 62%;
+    height: 271px;
+    margin-top: 15px;
+    border: 4px solid #fc8621;
+    
+}
+.instruction11{
+    background-image: url(img/instruction_img11.jpeg);
+    width: 62%;
+    height: 225px;
+    margin-top: 15px;
+    border: 4px solid #682c0e;
+    
+}
+.instruction12  {
+    background-image: url(img/instruction_img12.jpeg);
+    width: 62%;
+    height: 366px;
+    margin-top: 15px;
+    border: 4px solid #fc8621;
+    
+}
+.inst__text{
+    color: black;
+    font-size: 20px;
+}
+.inst__part1{
+    width: 50%;
+    padding-left: 6%;
+    padding-right: 3%; 
+}
+.inst__part2{
+    width: 50%;
+    padding-right: 6%;
+    padding-left: 3%;
+}
+.normas{
+    width: 50%;
+    padding-right: 6%;
+    padding-left: 3%;
+}
+
+.normas__img{
+    background-image: url(img/reglas.png);
+    width: 62%;
+    height: 271px;
+    margin-top: 15px;
+    border: 4px solid rgba(149, 84, 38, 1);
+
+}
+.normas__title{
+    font-size: 40px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+                    
+
+
+
+.body{
+    display: flex;
+    max-width: 1440px;
+ 
+    width: 100%;
+
+}
+.text-principal{
+    color: white;
+    height: 100%;
+    width: 60%;
+    background: #fc8721aa;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column ;
+    opacity: 0;
+    transition: 0.5s;
+    
+
+
+}
+.text-sec1{
+     color: white;
+    height: 100%;
+    width: 60%;
+    background: #682c0eaa;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column ;
+    opacity: 0;
+    transition: 0.5s;
+    
+}
+.text-principal:hover{
+    opacity: 1;
+    
+}
+.text-sec1:hover{
+    opacity: 1;
+
+}
+.text-principal::before{
+    content: url(img/icons/ic1.svg);
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    
+}
+.text-principal::after{
+    content: url(img/icons/ic2.svg);
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    
+}
+.text-sec1::before{
+    content: url(img/icons/ic1.svg);
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    
+}
+.text-sec1::after{
+    content: url(img/icons/ic2.svg);
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    
+}
+footer{
+    width: 100%;
+    height: 30vh;
+    background-color: rgba(35, 35, 35, 0.932);
+
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer__text{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+}
+@media screen and (min-width:1400px) {
+
+    .part1,.part2{
+        width: 100%;
+        max-width: 333px;
+    }
+    .body{
+        flex-direction: column;
+        
+        
+    }
+    .title h1{
+        font-family: 'Source Code Pro';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 30px;
+    }
+    .menu__link{
+        color: white;
+        font-size: 30px;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .info{
+        padding-left: 20px;
+        padding-right: 20px;
+        
+    }
+    .info__title{
+        margin-top: 20px;
+        font-size: 40px;
+        color: black;
+        text-align: center;
+    }
+    .info__text{
+        margin-top: 20px;
+        font-size: 20px;
+        color: black;
+    }
+    .horary__title{
+        margin-top: 20px;
+        font-size: 40px;
+        color: black;
+        text-align: center;
+
+    }
+    .horary__text{
+        margin-top: 20px;
+        font-size: 25px;
+        color: black;
+    }
+    .principal{
+        width: 100%;
+        height: 210px;
+        
+    
+        margin-top: 15px;
+    }
+    .sec1{
+        width: 100%;
+        height: 249px;
+        
+    }
+    .sec2{
+        width: 100%;
+        height: 229px;
+        
+    }
+    .sec3{
+        width: 100%;
+        height: 225px;
+        
+    }
+    .sec4{
+        width: 100%;
+        height: 230px;
+        
+    }
+    .sec5{
+        width: 100%;
+        height: 230px;
+        
+    }
+    .sec6{
+        width: 100%;
+        height: 230px;
+        
+    }
+    .sec7{
+        width: 100%;
+        height: 230px;
+        
+    }
+
+    .footer__text{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 17px;
+    }
+    footer{
+        width: 100%;
+        height: 12vh;
+        background-color: rgba(35, 35, 35, 0.932);
+        
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    h1{
+        
+        font-size: 90px;   
+    }
+    
+    .title{
+        
+        font-size: 80px;
+        
+        
+        
+    }
+
+
+
+
+
+    .instruction1{
+        width: 62%;
+        height: 337px;
+        
+    
+        margin-top: 15px;
+    }
+    .instruction2{
+        width: 62%;
+        height: 270px;
+        
+    }
+    .instruction3{
+        width: 62%;
+        height: 270px;
+        
+    }
+    .instruction4{
+        width: 62%;
+        height: 131px;
+        
+    }
+    .instruction5{
+        width: 62%;
+        height: 349px;
+        
+    }
+    .instruction6{
+        width: 62%;
+        height: 378px;
+        
+    }
+    .instruction7{
+        width: 62%;
+        height: 109px;
+        
+    }
+    .instruction8{
+        width: 62%;
+        height: 271px;
+        
+    }
+    .instruction9{
+        width: 62%;
+        height: 277px;
+        
+    }
+    .instruction10{
+        width: 62%;
+        height: 271px;
+        
+    }
+    .instruction11{
+        width: 62%;
+        height: 225px;
+        
+    }
+    .instruction12  {
+        width: 62%;
+        height: 366px;
+        
+    }
+    .inst__text{
+        color: black;
+        font-size: 20px;
+        width: 37%;
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        padding: 50px 9px;
+       
+
+    }
+    .inst__box{
+        display: flex;
+    }
+    .part__title{
+        font-size: 30px;
+        margin: 8px auto;
+    }
+    .inst__title{
+       
+        font-size: 40px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .inst__part1,.inst__part2{
+        width: 100%;
+        max-width: 333px;
+        display: flex;
+        flex-direction: column;
+    }
+    .normas{
+        width: 100%;
+        max-width: 333px;
+        
+    }
+    
+    .normas__img{
+        background-image: url(img/reglas.png);
+        width: 83%;
+        height: 386px;
+        margin-top: 15px;
+        border: 4px solid rgba(149, 84, 38, 1);
+        margin: auto;
+    
+    }
+    .normas__title{
+        font-size: 40px;
+        margin: 20px auto;
+        text-align: center;
+    }
+    .map__text1{
+        font-size: 20px;
+        
+    }
+    .map__title{
+        font-size: 40px;
+        margin: 20px auto;
+        text-align: center;
+    }
+    .map__logo1{
+        width: 40px;
+        margin: 0 30px ;
+        
+    }
+    .map__url1{
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.821);
+        
+    }
+    
+    .map__box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer__logo{
+        width: 157px;
+        height: 68px;
+        margin-right: 10px;
+    }
+    footer{
+        padding: 10px ;
+    }
+    
+
+}
+@media screen and (max-width:1400px) {
+    h1{
+        font-size: 50px;
+    }
+    h2{
+        font-size: 25px;
+    }
+    p{
+        font-size: 16px;
+    }
+    .title{
+        left: 0;
+        transform: translate(0,20%);
+        text-align: left;
+        top: 50%;
+        padding: 0;
+        height: auto;
+
+
+    }
+    .text-principal, .text-sec1{
+        opacity: 1;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: auto;
+    }
+    .part1>div,.part2>div{
+        position: relative;
+        background-size: cover;
+        
+    }
+    .inst__box>div{
+        position: relative;
+        background-size: cover;
+        
+    }.normas__title>div{
+        position: relative;
+        background-size: cover;
+        
+    }
+    
+    .text-principal::before,
+    .text-principal::after,
+    .text-sec1::before,
+    .text-sec1::after{
+        content: '';
+        
+        
+    }
+    .part1,.part2{
+        width: 100%;
+        max-width: 600px;
+        padding: 0;
+    }
+    .inst__part1,.inst__part2{
+        width: 100%;
+        max-width: 600px;
+        padding: 0;
+    }
+    .normas{
+        width: 100%;
+        max-width: 600px;
+        padding: 0;
+    }
+    .body{
+       
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+    .portal{
+        position: relative;
+    }
+    h1{
+        
+        font-size: 60px;
+        
+      
+        
+    }
+    .title{
+        
+        font-size: 50px;
+        
+        
+        
+    }
+    .principal{
+        
+        height: 397px;
+        margin-top: 40px;
+        
+        
+    }
+    .sec1{
+        
+        height: 397px;
+        margin-top: 40px;
+        
+    }
+    .sec2{
+        
+        height: 397px;
+        margin-top: 40px;
+        
+    }
+    .sec3{
+       
+        height: 397px;
+        margin-top: 40px;
+        
+    }
+    .sec4{
+        
+        height: 397px;
+        margin-top: 40px;
+        
+    }
+    .sec5{
+        
+        height: 397px;
+        margin-top: 40px;
+        
+    }
+    .sec6{
+        
+        height: 397px;
+        margin-top: 40px;
+        
+    }
+    .sec7{
+        height: 397px;
+        margin-top: 40px;
+        
+    }
+    header{
+        
+        height: 30vh;
+    }
+    .header{
+        
+        height: 30vh;
+    }
+
+
+
+    .instruction1{
+        background-image: url(img/instruction_img1.jpeg);
+        width: 70%;
+        height: 555px;
+        
+    
+        margin-top: 15px;
+    }
+    .instruction2{
+        background-image: url(img/instruction_img2.jpeg);
+        width: 65%;
+        height: 479px;
+        
+    }
+    .instruction3{
+        background-image: url(img/instruction_img3.jpeg);
+        width: 70%;
+        height: 440px;
+        
+    }
+    .instruction4{
+        background-image: url(img/instruction_img4.jpeg);
+        width: 63%;
+        height: 215px;
+        
+    }
+    .instruction5{
+        background-image: url(img/instruction_img5.jpeg);
+        width: 70%;
+        height: 624px;
+        
+    }
+    .instruction6{
+        background-image: url(img/instruction_img6.jpeg);
+        width: 40%;
+        height: 420px;
+        
+    }
+    .instruction7{
+        background-image: url(img/instruction_img7.jpeg);
+        width: 70%;
+        height: 205px;
+        
+    }
+    .instruction8{
+        background-image: url(img/instruction_img8.jpeg);
+        width: 70%;
+        height: 480px;
+        
+    }
+    .instruction9{
+        background-image: url(img/instruction_img9.jpeg);
+        width: 80%;
+        height: 528px;
+        
+    }
+    .instruction10{
+        background-image: url(img/instruction_img10.jpeg);
+        width: 70%;
+        height: 469px;
+        
+    }
+    .instruction11{
+        background-image: url(img/instruction_img11.jpeg);
+        width: 80%;
+        height: 452px;
+        
+    }
+    .instruction12  {
+        background-image: url(img/instruction_img12.jpeg);
+        width: 70%;
+        height: 646px;
+        
+    }
+    .inst__text{
+        color: black;
+        font-size: 40px;
+        width: 37%;
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        padding: 30px 9px;
+       
+
+    }
+    
+    .inst__part1,.inst__part2{
+        width: 100%;
+       
+    }
+    .normas{
+        width: 100%;
+       
+    }
+    .inst__box{
+        display: flex;
+    }
+    .part__title{
+        font-size: 50px;
+        margin: 8px auto;
+    }
+    .inst__title{
+        font-size: 80px;
+        text-align: center;
+        
+    }
+    .horary__title{
+        margin-top: 20px;
+        font-size: 80px;
+        color: black;
+        text-align: center;
+
+    }
+    .horary__text{
+        margin-top: 20px;
+        font-size: 50px;
+        color: black;
+        
+    }
+    .info__title{
+        margin-top: 20px;
+        font-size: 80px;
+        color: black;
+        text-align: center;
+    }
+    .info__text{
+        margin-top: 20px;
+        font-size: 40px;
+        color: black;
+        padding: 10px 30px;
+    }
+    .map__title{
+        margin-top: 20px;
+        font-size: 80px;
+        color: black;
+        text-align: center;
+    }
+    .map__text1{
+        margin-top: 20px;
+        font-size: 60px;
+        color: black;
+    }
+    .map__url1{
+        margin-top: 20px;
+        font-size: 30px;
+        
+    }
+    .map__logo1{
+        width: 100px;
+    }
+    .normas__img{
+        width: 100%;
+        height: 810px;
+    }
+    .normas__title{
+        margin-top: 20px;
+        font-size: 80px;
+        color: black;
+        text-align: center;
+    }
+    .footer__logo{
+        width: 638px;
+        height: 224px;
+    }
+    .text-principal h2{
+        font-size: 40px;
+    }
+    .text-sec1 h2{
+        font-size: 40px;
+    }
+  
+    
+
+    
+}
+@media screen and (max-width:1400px) and (orientation:landscape)  {
+    .part1,.part2{
+        width: 40%;
+    }
+    .inst__part1,.inst__part2{
+        width: 100%;
+        margin: auto;
+    }
+    .instruction{
+        width: 100%;
+        margin: auto;
+    }
+
+    .body{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: start;
+        
+        
+    }
+    .header{
+       
+        height: 93vh;
+        
+    
+    
+    }
+    header{
+       
+        height: 70vh;
+        
+    
+    
+    }
+    h1{
+        
+        font-size: 90px;
+        
+      
+        
+    }
+    .title{
+        
+        font-size: 90px;
+        
+        
+        
+    }
+    .principal{
+        
+        height: 352px;
+        
+        
+    }
+    .sec1{
+        
+        height: 352px;
+        
+    }
+    .sec2{
+        
+        height: 352px;
+        
+    }
+    .sec3{
+       
+        height: 352px;
+        
+    }
+    .sec4{
+        
+        height: 352px;
+        
+    }
+    .sec5{
+        
+        height: 352px;
+        
+    }
+    .sec6{
+        
+        height: 352px;
+        
+    }
+    .sec7{
+        height: 352px;
+        
+    }
+    .map{
+        width: 100%;
+        text-align: center;
+    }
+    
+    .footer__logo{
+        width: 638px;
+        height: 296px;
+    }
+
+    
+    
+    
+
+    
+}
+@media screen and (max-width:475px) {
+    .part1,.part2{
+        width: 100%;
+        max-width: 333px;
+    }
+    .body{
+        flex-direction: column;
+        
+        
+    }
+    .title h1{
+        font-family: 'Source Code Pro';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 30px;
+    }
+    .menu__link{
+        color: white;
+        font-size: 30px;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .info{
+        padding-left: 20px;
+        padding-right: 20px;
+        
+    }
+    .info__title{
+        margin-top: 20px;
+        font-size: 40px;
+        color: black;
+        text-align: center;
+    }
+    .info__text{
+        margin-top: 20px;
+        font-size: 20px;
+        color: black;
+    }
+    .horary__title{
+        margin-top: 20px;
+        font-size: 40px;
+        color: black;
+        text-align: center;
+
+    }
+    .horary__text{
+        margin-top: 20px;
+        font-size: 25px;
+        color: black;
+    }
+    .principal{
+        width: 100%;
+        height: 210px;
+        
+    
+        margin-top: 15px;
+    }
+    .sec1{
+        width: 100%;
+        height: 249px;
+        
+    }
+    .sec2{
+        width: 100%;
+        height: 229px;
+        
+    }
+    .sec3{
+        width: 100%;
+        height: 225px;
+        
+    }
+    .sec4{
+        width: 100%;
+        height: 230px;
+        
+    }
+    .sec5{
+        width: 100%;
+        height: 230px;
+        
+    }
+    .sec6{
+        width: 100%;
+        height: 230px;
+        
+    }
+    .sec7{
+        width: 100%;
+        height: 230px;
+        
+    }
+
+    .footer__text{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 17px;
+    }
+    footer{
+        width: 100%;
+        height: 12vh;
+        background-color: rgba(35, 35, 35, 0.932);
+        
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    h1{
+        
+        font-size: 40px;
+        
+      
+        
+    }
+    .title{
+        
+        font-size: 30px;
+        
+        
+        
+    }
+
+
+
+
+
+    .instruction1{
+        width: 62%;
+        height: 337px;
+        
+    
+        margin-top: 15px;
+    }
+    .instruction2{
+        width: 62%;
+        height: 270px;
+        
+    }
+    .instruction3{
+        width: 62%;
+        height: 270px;
+        
+    }
+    .instruction4{
+        width: 62%;
+        height: 131px;
+        
+    }
+    .instruction5{
+        width: 62%;
+        height: 349px;
+        
+    }
+    .instruction6{
+        width: 62%;
+        height: 378px;
+        
+    }
+    .instruction7{
+        width: 62%;
+        height: 109px;
+        
+    }
+    .instruction8{
+        width: 62%;
+        height: 271px;
+        
+    }
+    .instruction9{
+        width: 62%;
+        height: 277px;
+        
+    }
+    .instruction10{
+        width: 62%;
+        height: 271px;
+        
+    }
+    .instruction11{
+        width: 62%;
+        height: 225px;
+        
+    }
+    .instruction12  {
+        width: 62%;
+        height: 366px;
+        
+    }
+    .inst__text{
+        color: black;
+        font-size: 20px;
+        width: 37%;
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        padding: 50px 9px;
+       
+
+    }
+    .inst__box{
+        display: flex;
+    }
+    .part__title{
+        font-size: 30px;
+        margin: 8px auto;
+    }
+    .inst__title{
+       
+        font-size: 40px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .inst__part1,.inst__part2{
+        width: 100%;
+        max-width: 333px;
+        display: flex;
+        flex-direction: column;
+    }
+    .normas{
+        width: 100%;
+        max-width: 333px;
+        
+    }
+    
+    .normas__img{
+        background-image: url(img/reglas.png);
+        width: 83%;
+        height: 386px;
+        margin-top: 15px;
+        border: 4px solid rgba(149, 84, 38, 1);
+        margin: auto;
+    
+    }
+    .normas__title{
+        font-size: 40px;
+        margin: 20px auto;
+        text-align: center;
+    }
+    .map__text1{
+        font-size: 20px;
+        
+    }
+    .map__title{
+        font-size: 40px;
+        margin: 20px auto;
+        text-align: center;
+    }
+    .map__logo1{
+        width: 40px;
+        margin: 0 30px ;
+        
+    }
+    .map__url1{
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.821);
+        font-size: 15px;
+        
+    }
+    
+    .map__box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer__logo{
+        width: 157px;
+        height: 68px;
+        margin-right: 10px;
+    }
+    footer{
+        padding: 10px ;
+    }
+    
+    
+    
+
+    
+}
+@media screen and (max-width:899px) and (orientation:landscape){
+    .part1,.part2{
+        width: 100%;
+    }
+    .body{
+        flex-direction: column;
+        align-items: center;
+
+        
+    }
+    .title h1{
+        font-family: 'Source Code Pro';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    }
+    .header{
+       
+        height: 84vh;
+        
+    
+    
+    }
+    header{
+       
+        height: 84vh;
+        
+    
+    
+    }
+    .footer__text{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 19px;
+    }
+    footer{
+        width: 100%;
+        height: 30vh;
+        background-color: rgba(35, 35, 35, 0.932);
+        
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .horary__title{
+        margin-top: 20px;
+        font-size: 40px;
+        color: black;
+        text-align: center;
+
+    }
+    .horary__text{
+        margin-top: 20px;
+        font-size: 25px;
+        color: black;
+    }
+    .principal{
+        
+        width: 100%;
+        height: 388px;
+        display: flex;
+        
+    
+        margin-top: 15px;
+    }
+    .sec1{
+        width: 100%;
+        height: 388px;
+        
+    }
+    .sec2{
+        width: 100%;
+        height: 388px;
+        
+    }
+    .sec3{
+        width: 100%;
+        height: 388px;
+        
+    }
+    .sec4{
+        width: 100%;
+        height: 388px;
+        
+    }
+    .sec5{
+        width: 100%;
+        height: 388px;
+        
+    }
+    .sec6{
+        width: 100%;
+        height: 388px;
+        
+    }
+    .sec7{
+        width: 100%;
+        height: 388px;
+        
+    }
+    h1{
+        
+        font-size: 60px;
+        
+      
+        
+    }
+    .title{
+        
+        font-size: 50px;
+        
+        
+        
+    }
+
+
+
+
+    .instruction1{
+        width: 57%;
+        height: 537px;
+        display: flex;
+        
+    
+        margin-top: 15px;
+    }
+    .instruction2{
+        width: 80%;
+        height: 461px;
+        
+    }
+    .instruction3{
+        width: 70%;
+        height: 440px;
+        
+    }
+    .instruction4{
+        width: 63%;
+        height: 215px;
+        
+    }
+    .instruction5{
+        width: 70%;
+        height: 624px;
+        
+    }
+    .instruction6{
+        width: 40%;
+        height: 420px;
+        
+    }
+    .instruction7{
+        width: 70%;
+        height: 205px;
+        
+    }
+    .instruction8{
+        width: 70%;
+        height: 480px;
+        
+    }
+    .instruction9{
+        width: 70%;
+        height: 400px;
+        
+    }
+    .instruction10{
+        width: 70%;
+        height: 383px;
+        
+    }
+    .instruction11{
+        width: 70%;
+        height: 420px;
+        
+    }
+    .instruction12  {
+        width: 70%;
+        height: 550px;
+        
+    }
+    .inst__text{
+        color: black;
+        font-size: 33px;
+        width: 37%;
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        padding: 80px 9px;
+       
+
+    }
+    
+    .inst__part1,.inst__part2{
+        width: 100%;
+       
+    }
+    .normas{
+        width: 100%;
+       
+    }
+    .normas__title{
+        font-size: 40px;
+        margin: 20px auto;
+        text-align: center;
+    }
+    .normas{
+        width: 100%;
+        max-width: 333px;
+        
+    }
+    
+    .normas__img{
+        width: 83%;
+        height: 386px;
+        margin-top: 15px;
+        border: 4px solid rgba(149, 84, 38, 1);
+        margin: auto;
+    
+    }
+    .inst__box{
+        display: flex;
+    }
+    .part__title{
+        font-size: 37px;
+        margin: 8px auto;
+    }
+    .inst__title{
+        font-size: 47px;
+    }
+    .footer__logo{
+        width: 172px;
+        height: 91px;
+        margin-right: 10px;
+    }
+    footer{
+        padding: 10px ;
+    }
+    
+
+    
+}
